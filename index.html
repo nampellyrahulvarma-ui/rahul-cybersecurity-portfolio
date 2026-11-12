@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b0d">
+  <meta name="description" content="Rahul Varma Nampelly — SOC Analyst, Security Analyst, Threat Intelligence and Threat Hunting professional.">
+  <title>Rahul Varma | Cybersecurity Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#070b0d;--panel:#0b1215;--panel2:#0e181b;--line:#1c3538;--text:#e8f1ee;--muted:#8ba19b;--green:#49ffb0;--cyan:#42d9ff;--red:#ff4d67;--mono:'Share Tech Mono',monospace;--sans:'Space Grotesk',sans-serif}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(rgba(66,217,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(66,217,255,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+    body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:10;opacity:.12;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.035) 4px)}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(7,11,13,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font:18px var(--mono);letter-spacing:1px;color:var(--green)}.brand span{color:var(--text)}
+    .navlinks{display:flex;gap:22px;font:12px var(--mono);color:var(--muted);text-transform:uppercase}.navlinks a:hover{color:var(--green)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:var(--green);padding:8px 12px;font:14px var(--mono)}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:54px;padding:74px 0 90px;position:relative}
+    .eyebrow{font:13px var(--mono);letter-spacing:2px;color:var(--green);text-transform:uppercase}.eyebrow:before{content:"// ";color:var(--cyan)}
+    h1{font-size:clamp(44px,7vw,82px);line-height:.98;letter-spacing:-4px;margin:22px 0 18px;font-weight:700}
+    h1 .accent{color:var(--green);text-shadow:0 0 26px rgba(73,255,176,.22)}
+    .role{font:clamp(14px,2vw,18px) var(--mono);color:var(--cyan);line-height:1.7}
+    .intro{max-width:650px;color:#a9bbb5;line-height:1.85;font-size:16px;margin:24px 0 28px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border:1px solid var(--green);font:13px var(--mono);text-transform:uppercase;letter-spacing:1px;color:var(--green);transition:.25s}.btn.primary{background:var(--green);color:#06100c;font-weight:bold}.btn:hover{transform:translateY(-3px);box-shadow:0 0 24px #49ffb044}
+    .statusline{margin-top:28px;display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font:12px var(--mono)}.pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);margin-right:7px}
+    .visual{position:relative;min-height:470px;display:grid;place-items:center}
+    .orbit{position:absolute;width:min(440px,90vw);aspect-ratio:1;border:1px solid #1d5650;border-radius:50%;box-shadow:0 0 55px #49ffb010,inset 0 0 55px #49ffb008}
+    .orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed #23665b;border-radius:50%;inset:26px;animation:spin 32s linear infinite}.orbit:after{inset:62px;border-color:#17454c;animation-direction:reverse;animation-duration:24s}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .portrait-frame{width:min(310px,68vw);height:390px;position:relative;z-index:2;border:1px solid var(--green);padding:8px;background:#081012;box-shadow:0 0 45px #49ffb022}
+    .portrait-frame:before{content:"";position:absolute;inset:-10px 22px 22px -10px;border:1px solid var(--cyan);z-index:-1;opacity:.5}
+    .portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:contrast(1.04) saturate(.88)}
+    .scan{position:absolute;left:8px;right:8px;height:2px;top:8px;background:var(--green);box-shadow:0 0 14px var(--green);animation:scan 5s ease-in-out infinite;opacity:.8}
+    @keyframes scan{0%,100%{top:8px}50%{top:calc(100% - 10px)}}
+    .float-tag{position:absolute;z-index:3;background:#091416;border:1px solid var(--line);padding:10px 13px;font:11px var(--mono);color:var(--cyan);box-shadow:0 10px 30px #0008}.tag-a{top:55px;right:-5px}.tag-b{bottom:65px;left:-12px;color:var(--green)}
+    section{padding:92px 0;border-top:1px solid #142326}.section-head{margin-bottom:38px}.kicker{font:12px var(--mono);color:var(--green);letter-spacing:2px}.section-head h2{font-size:clamp(30px,4vw,48px);margin:10px 0}.section-head p{color:var(--muted);line-height:1.7;max-width:720px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,#0e191b,#091012);border:1px solid var(--line);padding:24px;position:relative;overflow:hidden;transition:.25s}.card:hover{border-color:#3b9f83;transform:translateY(-4px)}.card:after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border:1px solid #1e5147;transform:rotate(45deg)}
+    .card .num{font:12px var(--mono);color:var(--green)}.card h3{font-size:19px;margin:16px 0 10px}.card p{font-size:14px;line-height:1.75;color:var(--muted);margin:0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}.chip{font:11px var(--mono);padding:6px 8px;border:1px solid #24433f;color:#9adbc1}
+    .toolgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.tool{padding:15px;background:#0a1315;border:1px solid var(--line);font:13px var(--mono);color:#c7d8d2}.tool:before{content:"▸ ";color:var(--green)}
+    .timeline{border-left:1px solid #28634f;margin-left:8px;padding-left:28px}.event{position:relative;padding:0 0 30px}.event:before{content:"";position:absolute;left:-34px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}.event .date{font:12px var(--mono);color:var(--green)}.event h3{margin:8px 0}.event p{color:var(--muted);line-height:1.7;margin:6px 0}
+    .certs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cert{display:flex;align-items:center;gap:18px;padding:22px;border:1px solid var(--line);background:#0b1416}.cert-icon{width:58px;height:58px;display:grid;place-items:center;border:1px solid var(--green);color:var(--green);font:20px var(--mono);flex-shrink:0}.cert h3{margin:0 0 5px}.cert p{margin:0;color:var(--muted);font-size:13px}
+    .contactbox{border:1px solid #27604e;background:radial-gradient(circle at 85% 10%,#16423455,transparent 35%),#0a1214;padding:36px;display:flex;justify-content:space-between;align-items:center;gap:25px}.contactbox h2{font-size:clamp(28px,4vw,42px);margin:8px 0}.contactbox p{color:var(--muted);line-height:1.7}
+    footer{padding:28px 0;color:#6f8981;font:11px var(--mono);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .terminal{font:12px var(--mono);color:#9bb4aa;background:#050a0b;border:1px solid #1c3538;padding:14px;margin-top:22px;max-width:570px}.terminal .ok{color:var(--green)}.terminal .cyan{color:var(--cyan)}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:20px;padding-top:55px}.visual{min-height:430px;order:-1}.hero-copy{text-align:center}.intro{margin-left:auto;margin-right:auto}.actions,.statusline{justify-content:center}.grid{grid-template-columns:repeat(2,1fr)}.toolgrid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.wrap{width:min(100% - 28px,1160px)}nav{height:62px}.menu{display:block}.navlinks{display:none;position:absolute;top:62px;left:0;right:0;padding:20px;background:#081012;border-bottom:1px solid var(--line);flex-direction:column}.navlinks.open{display:flex}.hero{min-height:auto;padding:35px 0 65px}h1{letter-spacing:-2px}.visual{min-height:350px}.orbit{width:330px}.portrait-frame{height:310px;width:245px}.tag-a{right:0;top:24px}.tag-b{left:0;bottom:28px}section{padding:65px 0}.grid,.certs{grid-template-columns:1fr}.contactbox{padding:25px;display:block}.contactbox .btn{margin-top:10px}}
+  </style>
+</head>
+<body>
+<header class="topbar"><div class="wrap"><nav>
+  <a class="brand" href="#home">RV<span>_</span>SECURITY</a>
+  <button class="menu" id="menuBtn" aria-label="Open navigation">[ MENU ]</button>
+  <div class="navlinks" id="navlinks"><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#tools">Arsenal</a><a href="#work">Case studies</a><a href="#career">Career</a><a href="#contact">Contact</a></div>
+</nav></div></header>
+<main>
+<section class="hero wrap" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow">Cybersecurity professional / portfolio</div>
+    <h1>RAHUL<br><span class="accent">VARMA.</span></h1>
+    <div class="role">SOC ANALYST <span style="color:var(--muted)">|</span> THREAT INTELLIGENCE<br>THREAT HUNTING <span style="color:var(--muted)">|</span> SECURITY OPERATIONS</div>
+    <p class="intro">I work across security operations, incident response, threat hunting and cyber threat intelligence — turning security signals into actionable findings and helping teams strengthen their defensive posture.</p>
+    <div class="actions"><a class="btn primary" href="#work">Explore capabilities ↘</a><a class="btn" href="mailto:nampellyrahulvarma@gmail.com">Contact me ↗</a></div>
+    <div class="statusline"><span><i class="pulse"></i> SECURITY OPERATIONS</span><span>4.2 YEARS EXPERIENCE</span><span>HYDERABAD, INDIA</span></div>
+    <div class="terminal"><div><span class="ok">rahul@security-lab</span>:~$ whoami</div><div class="cyan">SOC Analyst • Threat Hunter • CTI</div><div><span class="ok">[✓]</span> Incident response | Detection | Intelligence</div></div>
+  </div>
+  <div class="visual">
+    <div class="orbit"></div><div class="float-tag tag-a">[ ID: RV-SEC-01 ]</div><div class="float-tag tag-b">● DEFENSIVE SECURITY / ACTIVE</div>
+    <div class="portrait-frame"><img src="assets/rahul-profile.jpg" alt="Portrait of Rahul Varma Nampelly"><div class="scan"></div></div>
+  </div>
+</section>
+<section id="about"><div class="wrap reveal"><div class="section-head"><div class="kicker">01 / PROFILE</div><h2>Inside the <span style="color:var(--green)">defence layer.</span></h2><p>Security professional with 4.2 years of experience in 24×7 security operations, incident response, threat hunting and threat intelligence. Experienced in monitoring, triaging and investigating security events, operationalizing intelligence, vulnerability management and security testing.</p></div>
+<div class="grid">
+  <article class="card"><div class="num">01 — DETECT</div><h3>Security Operations</h3><p>Alert monitoring, L1/L2 triage, investigation, escalation, incident coordination and detection use-case improvement.</p></article>
+  <article class="card"><div class="num">02 — HUNT</div><h3>Threat Hunting</h3><p>Proactive hunts focused on adversary tactics, techniques and procedures, intelligence requirements and suspicious activity.</p></article>
+  <article class="card"><div class="num">03 — UNDERSTAND</div><h3>Threat Intelligence</h3><p>OSINT research, dark web monitoring, domain and phishing investigations, vulnerability intelligence and threat reporting.</p></article>
+</div></div></section>
+<section id="expertise"><div class="wrap reveal"><div class="section-head"><div class="kicker">02 / CORE CAPABILITIES</div><h2>Operational <span style="color:var(--green)">expertise.</span></h2><p>Areas of practice reflected in my professional experience.</p></div>
+<div class="grid">
+  <article class="card"><div class="num">CAPABILITY_01</div><h3>SOC Monitoring & Incident Response</h3><p>24×7 monitoring, alert analysis, root-cause investigation, incident handling, SLA tracking and remediation coordination.</p></article>
+  <article class="card"><div class="num">CAPABILITY_02</div><h3>Threat Hunting & TTP Analysis</h3><p>Proactive investigation of adversary behaviours and operationalization of intelligence to support detection content.</p></article>
+  <article class="card"><div class="num">CAPABILITY_03</div><h3>Cyber Threat Intelligence</h3><p>CTI reporting, OSINT, dark web and deep web monitoring, threat actor research and vulnerability intelligence.</p></article>
+  <article class="card"><div class="num">CAPABILITY_04</div><h3>Vulnerability Management</h3><p>Vulnerability scanning coordination, exposure analysis, patch management support and CVE exploitation research.</p></article>
+  <article class="card"><div class="num">CAPABILITY_05</div><h3>Phishing & Brand Protection</h3><p>Phishing campaign investigation, look-alike domain analysis, impersonation monitoring and fraud research.</p></article>
+  <article class="card"><div class="num">CAPABILITY_06</div><h3>Security Testing</h3><p>Web application, network and API security testing using established assessment tools.</p></article>
+</div></div></section>
+<section id="tools"><div class="wrap reveal"><div class="section-head"><div class="kicker">03 / TECHNICAL ARSENAL</div><h2>Tools of the <span style="color:var(--green)">trade.</span></h2><p>Platforms and tools listed in my professional resume.</p></div>
+<h3 style="font:15px var(--mono);color:var(--cyan)">SIEM / SECURITY MONITORING</h3><div class="toolgrid">
+<div class="tool">Splunk Enterprise</div><div class="tool">Azure Sentinel</div><div class="tool">Alert Logic</div><div class="tool">Arctic Wolf</div></div>
+<h3 style="font:15px var(--mono);color:var(--cyan);margin-top:30px">EDR / EMAIL / SOAR</h3><div class="toolgrid">
+<div class="tool">CrowdStrike EDR</div><div class="tool">Microsoft Defender</div><div class="tool">Sophos MDR</div><div class="tool">Mimecast</div><div class="tool">Cisco IronPort</div><div class="tool">Palo Alto XSOAR</div></div>
+<h3 style="font:15px var(--mono);color:var(--cyan);margin-top:30px">VULNERABILITY / TESTING</h3><div class="toolgrid">
+<div class="tool">Qualys Guard VMDR</div><div class="tool">Nmap</div><div class="tool">Burp Suite</div><div class="tool">Nessus</div><div class="tool">Nexpose</div></div>
+<h3 style="font:15px var(--mono);color:var(--cyan);margin-top:30px">INTELLIGENCE / IDENTITY / WORKFLOW</h3><div class="toolgrid">
+<div class="tool">Intel 471</div><div class="tool">DomainTools</div><div class="tool">OSINT platforms</div><div class="tool">Microsoft Entra ID</div><div class="tool">ServiceNow</div><div class="tool">Zendesk</div></div>
+</div></section>
+<section id="work"><div class="wrap reveal"><div class="section-head"><div class="kicker">04 / SELECTED WORK</div><h2>Security <span style="color:var(--green)">case studies.</span></h2><p>Portfolio demonstrations based on the areas of work described in my resume. These are illustrative, sanitized scenarios — not claims about specific client incidents or confidential investigations.</p></div>
+<div class="grid">
+<article class="card"><div class="num">DEMO_CASE_01 / SOC</div><h3>Security Alert Triage & Incident Response</h3><p><b style="color:var(--text)">Scenario:</b> A suspicious sign-in and endpoint alert require investigation. Demonstrates alert validation, evidence correlation, severity assessment, escalation and response documentation.</p><div class="tags"><span class="chip">SIEM</span><span class="chip">EDR</span><span class="chip">Incident response</span></div></article>
+<article class="card"><div class="num">DEMO_CASE_02 / HUNT</div><h3>Proactive Threat Hunting</h3><p><b style="color:var(--text)">Scenario:</b> Hunt for suspicious behaviour using an intelligence-led hypothesis. Demonstrates TTP mapping, telemetry review, findings and detection recommendations.</p><div class="tags"><span class="chip">Threat hunting</span><span class="chip">TTPs</span><span class="chip">Detection</span></div></article>
+<article class="card"><div class="num">DEMO_CASE_03 / CTI</div><h3>Phishing & Look-alike Domain Intelligence</h3><p><b style="color:var(--text)">Scenario:</b> Investigate a suspected impersonation domain. Demonstrates passive reconnaissance, domain analysis, evidence capture, risk assessment and takedown reporting workflow.</p><div class="tags"><span class="chip">OSINT</span><span class="chip">Domain intelligence</span><span class="chip">Phishing</span></div></article>
+<article class="card"><div class="num">DEMO_CASE_04 / VULN</div><h3>Vulnerability Intelligence Review</h3><p><b style="color:var(--text)">Scenario:</b> Review a published CVE and assess exposure context. Demonstrates asset prioritization, severity review, exploitation intelligence and remediation tracking.</p><div class="tags"><span class="chip">CVE</span><span class="chip">Qualys</span><span class="chip">Risk</span></div></article>
+<article class="card"><div class="num">DEMO_CASE_05 / APPSEC</div><h3>Web & API Security Assessment</h3><p><b style="color:var(--text)">Scenario:</b> Conduct an authorized test-lab assessment. Demonstrates scope definition, Nmap discovery, Burp Suite testing, validation and responsible reporting.</p><div class="tags"><span class="chip">Nmap</span><span class="chip">Burp Suite</span><span class="chip">API security</span></div></article>
+<article class="card"><div class="num">DEMO_CASE_06 / BRAND</div><h3>Brand & Fraud Monitoring</h3><p><b style="color:var(--text)">Scenario:</b> Review suspected brand impersonation and fraudulent social content. Demonstrates evidence collection, impact assessment and abuse-report preparation.</p><div class="tags"><span class="chip">Brand protection</span><span class="chip">OSINT</span><span class="chip">Fraud</span></div></article>
+</div></div></section>
+<section id="career"><div class="wrap reveal"><div class="section-head"><div class="kicker">05 / CAREER LOG</div><h2>Experience & <span style="color:var(--green)">credentials.</span></h2></div>
+<div class="timeline"><div class="event"><div class="date">NOV 2021 — JAN 2026</div><h3>SOC Analyst (L1 & L2) · Cognizant Technology Solutions</h3><p>Client engagement: Google (as stated in resume). Worked across security monitoring, incident response, threat hunting, threat intelligence, vulnerability management and security testing.</p><p>Tools included Splunk, Azure Sentinel, Sophos MDR, Microsoft Defender XDR, Entra ID, Mimecast, Cisco IronPort, Qualys Guard and XSOAR.</p></div><div class="event"><div class="date">2017</div><h3>Bachelor's — Arts & Science</h3><p>Education details as provided in resume.</p></div></div>
+<div class="section-head" style="margin-top:30px"><div class="kicker">CERTIFICATIONS</div><h2 style="font-size:30px">Validated <span style="color:var(--green)">knowledge.</span></h2></div>
+<div class="certs"><div class="cert"><div class="cert-icon">CEH</div><div><h3>Certified Ethical Hacker</h3><p>CEH v12</p></div></div><div class="cert"><div class="cert-icon">CSA</div><div><h3>Certified SOC Analyst</h3><p>CSA v1</p></div></div></div>
+</div></section>
+<section id="contact"><div class="wrap reveal"><div class="contactbox"><div><div class="kicker">06 / ESTABLISH CONNECTION</div><h2>Let's secure what<br><span style="color:var(--green)">matters.</span></h2><p>Open to connecting about cybersecurity, security operations and threat intelligence opportunities.</p><div class="role" style="font-size:14px">nampellyrahulvarma@gmail.com</div></div><div class="actions" style="flex-direction:column;align-items:flex-start"><a class="btn primary" href="mailto:nampellyrahulvarma@gmail.com">Send an email ↗</a><a class="btn" href="https://www.linkedin.com/in/rahul-varma-nampelly-3a0523139" target="_blank" rel="noopener">LinkedIn profile ↗</a><a class="btn" href="https://github.com/nampellyrahulvarma-ui" target="_blank" rel="noopener">GitHub profile ↗</a></div></div></div></section>
+</main>
+<footer class="wrap"><span>© <span id="year"></span> RAHUL VARMA NAMPELLY</span><span>DEFENSIVE SECURITY • THREAT INTELLIGENCE • RESILIENCE</span><a href="#home">BACK TO TOP ↑</a></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('navlinks');
+  menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
